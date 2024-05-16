@@ -2,7 +2,7 @@
 use contratos
 1 db.contratos.countDocuments()
 2 db.contratos.countDocuments({tipoprocedimento : "Ajuste Direto Regime Geral"})
-3 db.contratos.distinct("entidade_comunicante").sort() DEU MAL, REVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+3 db.contratos.distinct("entidade_comunicante").sort()
 4 db.contratos.aggregate([{$group: {_id:"$tipoprocedimento", count: {$sum : 1}}}])
 5 assumindo NIPC_entidade_comunicante = 506359670
-db.contratos.aggregate([{$match: {"NIPC_entidade_comunicante" : "506359670"}}, {$group: {_id: null, montante: {$sum: "$precoContratual"}}}]) DEU MAL< REVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+db.contratos.aggregate([{$match: {"NIPC_entidade_comunicante" : "506359670"}}, {$group: {_id: null, montante: {$sum: "$precoContratual"}}}])
