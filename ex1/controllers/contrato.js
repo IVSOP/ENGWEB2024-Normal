@@ -20,12 +20,12 @@ module.exports.listTipo = (tipo) => {
 
 module.exports.listEntidades = () => {
 	return Contrato
-	.distinct("entidade_comunicante").sort().exec()
+	.distinct("entidade_comunicante", { _id: false }).sort().exec()
 }
 
 module.exports.listTipos = () => {
 	return Contrato
-	.distinct("tipoprocedimento").sort().exec()
+	.distinct("tipoprocedimento", { _id: false }).sort().exec()
 }
 
 module.exports.find = _id => {

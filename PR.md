@@ -23,6 +23,7 @@ neste exemplo,
     fundamentacao: ''
   },
 ```
+
 - nAnuncio e uma data
 - tipoprocedimento e uma data
 - dataPublicacao nao e uma data
@@ -31,11 +32,12 @@ neste exemplo,
 - prazoExecucao nao e um prazo
 
 assim, assumi que tem de ser feitas as seguintes alteracoes:
--fundamentacao = prazoExecucao
--prazoExecucao = dataPublicacao
--dataPublicacao = nAnuncio
--tipoprocedimento = ''
--nAnuncio = dataCelebracaoContrato
+
+- fundamentacao = prazoExecucao
+- prazoExecucao = dataPublicacao
+- dataPublicacao = nAnuncio
+- tipoprocedimento = ''
+- nAnuncio = dataCelebracaoContrato
 
 noutros casos, temos por exemplo objectoContrato: '6187,64', que converto para numero
 
@@ -96,4 +98,4 @@ o docker compose pode ser executado com
 docker compose up (-d)
 ```
 
-Infelizmente, acabei por nao o utilizar devido a problemas em inicializar o mongo-seed perto da hora de entrega, pelo que os enderecos usados no frontend e backend correspondem a localhost.
+Infelizmente, acabei por nao o utilizar devido a problemas em inicializar o mongo-seed perto da hora de entrega, pelo que os enderecos usados no frontend e backend correspondem aos enderecos locais.
